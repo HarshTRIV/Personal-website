@@ -1,0 +1,122 @@
+:root{
+  --open:none;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+  color: white;
+  height: 111px;
+}
+
+.site-title {
+  font-size: 2rem;
+  margin: .3rem;
+}
+
+.nav-bar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar-links li{
+  list-style: none;
+}
+
+.nav-bar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.nav-bar-links li:hover {
+  background-color: #555
+}
+
+.hamburger{
+  position: absolute;
+  display: none;
+  right: 1rem;
+  top: .75rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor:pointer;
+  z-index: 5;
+}
+
+
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-bar-links {
+    display: var(--open);
+    background-color:black;
+    position:relative;
+    top: 75px;
+  }
+  
+  .nav-bar-links ul {
+    flex-direction: column;
+  }
+  .nav-bar-links li {
+    text-align: center;
+  }
+
+  .nav-bar-links li a {
+    padding: .5rem 1rem;
+  }
+}
+
+.active .bar:nth-child(1){
+  transform:rotateZ(45deg);
+}
+
+.active .bar:nth-child(2){
+  transform:rotateZ(45deg);
+}
+
+.active .bar:nth-child(3){
+  transform:rotateZ(45deg);
+}
+/* Sections */
+
+main section{
+  height: 100vh;
+	width: 100%;
+}
+
+.bg{
+  background: url('https://wallpaperaccess.com/full/1267249.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
